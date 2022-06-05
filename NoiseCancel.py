@@ -118,6 +118,6 @@ def visualize(path: str):
 
 if __name__ == "__main__":
 
-    path = 'D:/Projects/Coding/Python/3.9/Sound/Sounds/a0001.wav'
+    path = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/.wav'
  
     visualize(path)

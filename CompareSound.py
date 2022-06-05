@@ -62,23 +62,19 @@ def visualize(Filepath: str, FilteredPath: str):
     # shows the plot
     # in new window
     plt.show()
-    #wavfile.write("Python/OutPutFiles/SigTest.wav",RecTime,RecSig)
-    # you can also save
-    # the plot using
-    # plt.savefig('filename')
+
  
 
 if __name__ == "__main__":
 
-    '''# files                                                                         
-    src = "D:/Projects/TIA_CSM/Heart/3inch2.mp3"
-    dst = "D:/Projects/Coding/Python/3.9/Sound/Sounds/File.wav"
+    # files                                                                         
+    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/.mp3"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/File.wav"
 
     # convert wav to mp3                                                            
     sound = AudioSegment.from_mp3(src)
-    sound.export(dst, format="wav")
+    sound.export(Filepath, format="wav")
     # gets the command line Value'''
-    Filepath = 'D:/Projects/Coding/Python/3.9/Sound/Sounds/File.wav'
-    FilteredPath = 'D:/Projects/Coding/Python/3.9/Sound/Sounds/LowPassFiltered.wav'
+    FilteredPath = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/LowPassFiltered.wav'
  
     visualize(Filepath,FilteredPath)

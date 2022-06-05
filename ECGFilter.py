@@ -3,7 +3,7 @@ import scipy.signal
 import numpy as np
 import matplotlib.pyplot as plt
 
-FileName = 'D:/Projects/Coding/Python/3.9/Sound/Sounds/File.wav'
+FileName = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/.wav'
 
 # read ECG data from the WAV file
 sampleRate, data = scipy.io.wavfile.read(FileName)
