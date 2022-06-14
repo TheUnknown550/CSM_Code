@@ -5,8 +5,8 @@ import sys
 import math
 import contextlib
 
-fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/.wav'
-outname = 'D:/Projects/Coding/Python/3.9/Sound/Sounds/LowPassFiltered.wav'
+fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/.wav'
+outname = 'D:/Projects/Coding/Python/3.9/Sound/Testing/LowPassFiltered.wav'
 
 cutOffFrequency = 200.0
 

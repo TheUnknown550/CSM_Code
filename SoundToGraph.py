@@ -36,8 +36,8 @@ def visualize(path: str):
 
 if __name__ == "__main__":
 
-    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/5inch1.mp3"
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/TestingFile.wav"
+    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/SpongeTest/A51/Test1.wav"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/TestingFile.wav"
 
     # convert wav to mp3                                                            
     sound = AudioSegment.from_mp3(src)

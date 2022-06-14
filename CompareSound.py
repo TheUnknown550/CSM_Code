@@ -68,13 +68,13 @@ def visualize(Filepath: str, FilteredPath: str):
 if __name__ == "__main__":
 
     # files                                                                         
-    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/.mp3"
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/File.wav"
+    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/.mp3"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/File.wav"
 
     # convert wav to mp3                                                            
     sound = AudioSegment.from_mp3(src)
     sound.export(Filepath, format="wav")
     # gets the command line Value'''
-    FilteredPath = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Sounds/LowPassFiltered.wav'
+    FilteredPath = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/LowPassFiltered.wav'
  
     visualize(Filepath,FilteredPath)
