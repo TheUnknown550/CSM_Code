@@ -56,8 +56,8 @@ def visualize(Filepath: str, FilteredPath: str):
     plt.xlabel("Time")
     
     # actual plotting
-    plt.plot(time, signal, label='Original')
-    plt.plot(FilteredTime, FilteredSig, linewidth = 2,label='LowPassFiltered')
+    plt.plot(time, signal, label='File1')
+    plt.plot(FilteredTime, FilteredSig, linewidth = 2,label='File2')
     plt.legend()
     # shows the plot
     # in new window
@@ -68,13 +68,9 @@ def visualize(Filepath: str, FilteredPath: str):
 if __name__ == "__main__":
 
     # files                                                                         
-    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/.mp3"
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/File.wav"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest1.wav"
 
-    # convert wav to mp3                                                            
-    sound = AudioSegment.from_mp3(src)
-    sound.export(Filepath, format="wav")
     # gets the command line Value'''
-    FilteredPath = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/LowPassFiltered.wav'
+    FilePath1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/murmur/murmur.wav'
  
-    visualize(Filepath,FilteredPath)
+    visualize(Filepath,FilePath1)

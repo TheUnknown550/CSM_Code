@@ -19,10 +19,10 @@ def Graph(time,signal,EditSignal):
     plt.plot(time, EditSignal)
     plt.show()
 
-src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/5inch1.mp3"
-Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/TestingFile.wav"
+#src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/5inch1.mp3"
+Filepath = "C:\Users\mattc\OneDrive\Documents\Project\CSM\Testing\SpongeTest\A51\None\Test1.wav"
 # convert wav to mp3                                                            
-sound = AudioSegment.from_mp3(src)
+sound = AudioSegment.from_mp3(Filepath)
 sound.export(Filepath, format="wav")
 
 #variables
