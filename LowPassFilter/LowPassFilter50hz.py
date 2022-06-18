@@ -5,10 +5,10 @@ import sys
 import math
 import contextlib
 
-fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/.wav'
-outname = 'D:/Projects/Coding/Python/3.9/Sound/Testing/LowPassFiltered.wav'
+fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/Both/B9.wav'
+outname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 
-cutOffFrequency = 200.0
+cutOffFrequency = 50.0
 
 # from http://stackoverflow.com/questions/13728392/moving-average-or-running-mean
 def running_mean(x, windowSize):
