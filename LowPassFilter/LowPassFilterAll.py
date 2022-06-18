@@ -5,7 +5,7 @@ import sys
 import math
 import contextlib
 
-fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/Both/B11.wav'
+fname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test11.wav'
 outname1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 outname2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile2.wav'
 outname3 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile3.wav'
