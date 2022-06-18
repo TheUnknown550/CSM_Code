@@ -2,8 +2,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import wave, sys
-from scipy.io import wavfile
-from pydub import AudioSegment
  
 # shows the sound waves
 def visualize(path: str):
@@ -36,11 +34,6 @@ def visualize(path: str):
 
 if __name__ == "__main__":
 
-    src = "C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/murmur/murmur.wav"
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/murmur/murmur.wav"
-
-    # convert wav to mp3                                                            
-    sound = AudioSegment.from_mp3(src)
-    sound.export(Filepath, format="wav")
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav"
  
     visualize(Filepath)

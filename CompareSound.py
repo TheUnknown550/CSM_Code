@@ -68,9 +68,9 @@ def visualize(Filepath: str, FilteredPath: str):
 if __name__ == "__main__":
 
     # files                                                                         
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/SpongeTest/A22/Sponge/Test10.wav"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test7.wav"
 
     # gets the command line Value'''
-    FilePath1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/murmur/murmur.wav'
+    FilePath1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
  
     visualize(Filepath,FilePath1)

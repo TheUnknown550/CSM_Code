@@ -39,7 +39,7 @@ data3 = []
 data4 = []
 data5 = []
 data6 = []
-ex = '71'
+ex = '67'
 file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test11.wav' #WAV File Path
 file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 file_name3 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile2.wav'
@@ -122,7 +122,8 @@ print('400hz.: ',returnvalue6)
 
 #Upload to Excel
 wb = px.load_workbook('C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/ExprimentResult.xlsx')
-ws = wb.active
+wsbook = wb.active
+ws = wb['LowPassFilter']
 
 #Input the value to Excel
 ws['O'+ex].value = round(returnvalue1[0],3)
