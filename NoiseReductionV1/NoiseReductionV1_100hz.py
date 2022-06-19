@@ -41,7 +41,7 @@ write("C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoi
 plt.figure(1)
 plt.title("Sound Wave")
 plt.xlabel("Time")
-#plt.plot(time,CopSig)
+plt.plot(time,CopSig)
 plt.plot(time, signal)
 plt.show()
 

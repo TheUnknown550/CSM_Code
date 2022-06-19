@@ -39,8 +39,9 @@ data3 = []
 data4 = []
 data5 = []
 data6 = []
-ex = '67'
-file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test11.wav' #WAV File Path
+ex = '47'
+Sheet = 'Version2'
+file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A51/Test5.wav' #WAV File Path
 file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 file_name3 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile2.wav'
 file_name4 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile3.wav'
@@ -123,21 +124,21 @@ print('400hz.: ',returnvalue6)
 #Upload to Excel
 wb = px.load_workbook('C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/ExprimentResult.xlsx')
 wsbook = wb.active
-ws = wb['LowPassFilter']
+ws = wb[Sheet]
 
 #Input the value to Excel
-ws['O'+ex].value = round(returnvalue1[0],3)
-ws['P'+ex].value = round(returnvalue1[1],3)
-ws['Q'+ex].value = round(returnvalue2[0],3)
-ws['R'+ex].value = round(returnvalue2[1],3)
-ws['S'+ex].value = round(returnvalue3[0],3)
-ws['T'+ex].value = round(returnvalue3[1],3) 
-ws['U'+ex].value = round(returnvalue4[0],3)
-ws['V'+ex].value = round(returnvalue4[1],3)
-ws['W'+ex].value = round(returnvalue5[0],3)
-ws['X'+ex].value = round(returnvalue5[1],3)
-ws['Y'+ex].value = round(returnvalue6[0],3)
-ws['Z'+ex].value = round(returnvalue6[1],3)
+ws['B'+ex].value = round(returnvalue1[0],3)
+ws['C'+ex].value = round(returnvalue1[1],3)
+ws['D'+ex].value = round(returnvalue2[0],3)
+ws['E'+ex].value = round(returnvalue2[1],3)
+ws['F'+ex].value = round(returnvalue3[0],3)
+ws['G'+ex].value = round(returnvalue3[1],3) 
+ws['H'+ex].value = round(returnvalue4[0],3)
+ws['I'+ex].value = round(returnvalue4[1],3)
+ws['J'+ex].value = round(returnvalue5[0],3)
+ws['K'+ex].value = round(returnvalue5[1],3)
+ws['L'+ex].value = round(returnvalue6[0],3)
+ws['M'+ex].value = round(returnvalue6[1],3)
 
 
 #Save To excel

@@ -31,24 +31,36 @@ murmur = load_model('AI/murmur.h5') #murmur AI Path
 
 #variables
 mfccs = 0.0
-data = []
+data1 = []
+data2 = []
 result = []
-file_name = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test7.wav' #WAV File Path
+file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test1.wav' #WAV File Path
+file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 
 #Extract and read the WAV file for the AI
-a = extract_data(file_name)
-data.append(a)
+a1 = extract_data(file_name1)
+data1.append(a1)
+
+a2 = extract_data(file_name2)
+data2.append(a2)
 
 #Analize Predict and Save the data
-af_result = af.predict(np.array(data))
-murmur_result = murmur.predict(np.array(data))
-y = af_result[0]
-b = murmur_result[0]
+af_result = af.predict(np.array(data1))
+murmur_result = murmur.predict(np.array(data1))
+y1 = af_result[0]
+b1 = murmur_result[0]
+
+af_result = af.predict(np.array(data2))
+murmur_result = murmur.predict(np.array(data2))
+y2 = af_result[0]
+b2 = murmur_result[0]
 
 #Make it in % instead of 0.
-af_return = y[0]*100
-murmur_return = b[0]*100
-
+af_return = y1[0]*100
+murmur_return = b1[0]*100
 #Show the ai confidence[AF,murmur]
-returnvalue = [af_return, murmur_return]
-print(returnvalue)
+print('File 1: ',[af_return, murmur_return])
+
+af_return = y2[0]*100
+murmur_return = b2[0]*100
+print('File 2: ',[af_return, murmur_return])
