@@ -26,8 +26,8 @@ def extract_data(file_name):
     print(mfccs)
     return feature
 
-af = load_model('AI/AF.h5')#AF AI Path
-murmur = load_model('AI/murmur.h5') #murmur AI Path
+af = load_model('AI/Models/AF.h5')#AF AI Path
+murmur = load_model('AI/Models/murmur.h5') #murmur AI Path
 
 #variables
 mfccs = 0.0

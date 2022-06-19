@@ -26,15 +26,15 @@ def extract_data(file_name):
     print(mfccs)
     return feature
 
-af = load_model('AI/AF.h5')#AF AI Path
-murmur = load_model('AI/murmur.h5') #murmur AI Path
+af = load_model('AI/Models/AF.h5')#AF AI Path
+murmur = load_model('AI/Models/murmur.h5') #murmur AI Path
 
 #variables
 mfccs = 0.0
 data1 = []
 data2 = []
 result = []
-file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test1.wav' #WAV File Path
+file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A51/Test5.wav' #WAV File Path
 file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 
 #Extract and read the WAV file for the AI
