@@ -11,7 +11,7 @@ from scipy.io.wavfile import write
 samplerate = 44100  
 
 
-audioname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A51/Test11.wav'
+audioname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test1.wav'
 outFile = ['C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav',
 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile2.wav',
 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile3.wav',
