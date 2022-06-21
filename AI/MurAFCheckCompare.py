@@ -34,8 +34,8 @@ mfccs = 0.0
 data1 = []
 data2 = []
 result = []
-file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test2.wav' #WAV File Path
-file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test1.wav'
+file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test11.wav' #WAV File Path
+file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 
 #Extract and read the WAV file for the AI
 a1 = extract_data(file_name1)

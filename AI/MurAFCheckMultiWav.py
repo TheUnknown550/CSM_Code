@@ -12,18 +12,18 @@ import openpyxl as px
 #***variables***
 mfccs = 0.0
 result = []
-col = 5
-row1 = 'B'
-row2 = 'C'
-file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/SpongeTest/A51/Sponge'#WAV File Path
+col = 6
+row1 = 'F'
+row2 = 'G'
+file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/A51/HIFI/Hifi'#WAV File Path
 
 #Make list for all files
-file_name = [file+'/Test1.wav', file+'/Test2.wav', file+'/Test3.wav',
-file+'/Test4.wav', file+'/Test5.wav', file+'/Test6.wav', file+'/Test7.wav',
-file+'/Test8.wav', file+'/Test9.wav', file+'/Test10.wav', file+'/Test11.wav']
+file_name = [file+'Test1.wav', file+'Test2.wav', file+'Test3.wav',
+file+'Test4.wav', file+'Test5.wav', file+'Test6.wav', file+'Test7.wav',
+file+'Test8.wav', file+'Test9.wav', file+'Test10.wav', file+'Test11.wav']
 
-ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/SpongeTest/A51/ExprimentResult.xlsx' #Excel File Path  .xlsx
-Sheet = 'Sponge' #Excel Sheet that is being edited
+ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/ExprimentResult.xlsx' #Excel File Path  .xlsx
+Sheet = 'A51' #Excel Sheet that is being edited
 
 data = []
 data1 = []
