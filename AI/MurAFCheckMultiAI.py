@@ -44,8 +44,8 @@ AFList = []
 MurList = []
 returnvalue= []
 ex = '25'
-Sheet = 'Version2'
-file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A22/Test1.wav' #WAV File Path
+Sheet = 'LowPassFilterV3'
+file_name1 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/AITest/A51/Test1.wav' #WAV File Path
 file_name2 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav'
 file_name3 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile2.wav'
 file_name4 = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile3.wav'
@@ -165,9 +165,7 @@ CopiedValue = returnvalue.copy()
 #Find min value in AF and Murmur
 CopiedValue.sort()
 AFMin = CopiedValue[0][0]
-print(AFMin)
 AFMax = CopiedValue[len(CopiedValue)-1][0]
-print(AFMax)
 for i in range (len(CopiedValue)):
     CopiedValue[i].reverse()
 CopiedValue.sort()
