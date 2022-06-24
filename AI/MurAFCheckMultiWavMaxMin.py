@@ -8,28 +8,20 @@ import matplotlib.pyplot as plt
 import tensorflow
 from tensorflow.keras.models import load_model
 import openpyxl as px
+from openpyxl.styles import PatternFill
 
 #***variables***
 mfccs = 0.0
 result = []
 col = 6
-row1 = 'B'
-row2 = 'C'
-file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/None/A22'
-#file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/A22/EZRA/Ezra'#WAV File Path
+row1 = 'F'
+row2 = 'G'
+file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/A22/HIFI/Hifi'#WAV File Path
 
 #Make list for all files
-file_name1 = file+'Test1.wav'
-file_name2 = file+'Test2.wav'
-file_name3 = file+'Test3.wav'
-file_name4 = file+'Test4.wav'
-file_name5 = file+'Test5.wav'
-file_name6 = file+'Test6.wav'
-file_name7 = file+'Test7.wav'
-file_name8 = file+'Test8.wav'
-file_name9 = file+'Test9.wav'
-file_name10 = file+'Test10.wav'
-
+file_name = [file+'Test1.wav', file+'Test2.wav', file+'Test3.wav',
+file+'Test4.wav', file+'Test5.wav', file+'Test6.wav', file+'Test7.wav',
+file+'Test8.wav', file+'Test9.wav', file+'Test10.wav', file+'Test11.wav']
 
 ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/ExprimentResultDAC.xlsx' #Excel File Path  .xlsx
 Sheet = 'A22' #Excel Sheet that is being edited
@@ -71,13 +63,12 @@ def extract_data(file_name):
     print(mfccs)
     return feature
 
-
 af = load_model('AI/Models/AF.h5')#AF AI Path
 murmur = load_model('AI/Models/murmur.h5') #murmur AI Path
 
 
 #Extract and read the WAV file for the AI
-a = extract_data(file_name)
+a = extract_data(file_name[0])
 data.append(a)
 
 #Analize Predict and Save the data
@@ -94,7 +85,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 #Do the same for all files
-a = extract_data(file_name1)
+a = extract_data(file_name[1])
 data1.append(a)
 af_result = af.predict(np.array(data1))
 murmur_result = murmur.predict(np.array(data1))
@@ -105,7 +96,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name2)
+a = extract_data(file_name[2])
 data2.append(a)
 af_result = af.predict(np.array(data2))
 murmur_result = murmur.predict(np.array(data2))
@@ -116,7 +107,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name3)
+a = extract_data(file_name[3])
 data3.append(a)
 af_result = af.predict(np.array(data3))
 murmur_result = murmur.predict(np.array(data3))
@@ -127,7 +118,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name4)
+a = extract_data(file_name[4])
 data4.append(a)
 af_result = af.predict(np.array(data4))
 murmur_result = murmur.predict(np.array(data4))
@@ -138,7 +129,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name5)
+a = extract_data(file_name[5])
 data5.append(a)
 af_result = af.predict(np.array(data5))
 murmur_result = murmur.predict(np.array(data5))
@@ -149,7 +140,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name6)
+a = extract_data(file_name[6])
 data6.append(a)
 af_result = af.predict(np.array(data6))
 murmur_result = murmur.predict(np.array(data6))
@@ -160,7 +151,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name7)
+a = extract_data(file_name[7])
 data7.append(a)
 af_result = af.predict(np.array(data7))
 murmur_result = murmur.predict(np.array(data7))
@@ -171,7 +162,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name8)
+a = extract_data(file_name[8])
 data8.append(a)
 af_result = af.predict(np.array(data8))
 murmur_result = murmur.predict(np.array(data8))
@@ -182,7 +173,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name9)
+a = extract_data(file_name[9])
 data9.append(a)
 af_result = af.predict(np.array(data9))
 murmur_result = murmur.predict(np.array(data9))
@@ -193,7 +184,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name10)
+a = extract_data(file_name[10])
 data10.append(a)
 af_result = af.predict(np.array(data10))
 murmur_result = murmur.predict(np.array(data10))
@@ -242,6 +233,116 @@ ws[row2+str(col+9)].value = round(returnvalue[9][1],3)
 ws[row1+str(col+10)].value = round(returnvalue[10][0],3)
 ws[row2+str(col+10)].value = round(returnvalue[10][1],3)
 
+
+CopiedValue = returnvalue.copy()
+#Find min value in AF and Murmur
+CopiedValue.sort()
+AFMin = CopiedValue[0][0]
+AFMax = CopiedValue[len(CopiedValue)-1][0]
+for i in range (len(CopiedValue)):
+    CopiedValue[i].reverse()
+CopiedValue.sort()
+MurMin = CopiedValue[0][0]
+MurMax = CopiedValue[len(CopiedValue)-1][0]
+
+#Colour the cell in excel
+print('Changing Colour of Excel Cell')
+Red = PatternFill(patternType='solid', fgColor='35FC03')
+Green = PatternFill(patternType='solid', fgColor='FC2C03')
+
+if returnvalue[0][1] == MurMax:
+    ws[row1+str(col)].fill = Green
+if returnvalue[1][1] == MurMax:
+    ws[row1+str(col+1)].fill = Green
+if returnvalue[2][1] == MurMax:
+    ws[row1+str(col+2)].fill = Green
+if returnvalue[3][1] == MurMax:
+    ws[row1+str(col+3)].fill = Green
+if returnvalue[4][1] == MurMax:
+    ws[row1+str(col+4)].fill = Green
+if returnvalue[5][1] == MurMax:
+    ws[row1+str(col+5)].fill = Green
+if returnvalue[6][1] == MurMax:
+    ws[row1+str(col+1)].fill = Green
+if returnvalue[7][1] == MurMax:
+    ws[row1+str(col+2)].fill = Green
+if returnvalue[8][1] == MurMax:
+    ws[row1+str(col+3)].fill = Green
+if returnvalue[9][1] == MurMax:
+    ws[row1+str(col+4)].fill = Green
+if returnvalue[10][1] == MurMax:
+    ws[row1+str(col+5)].fill = Green
+
+if returnvalue[0][0] == AFMax:
+    ws[row2+str(col)].fill = Green
+if returnvalue[1][0] == AFMax:
+    ws[row2+str(col+1)].fill = Green
+if returnvalue[2][0] == AFMax:
+    ws[row2+str(col+2)].fill = Green
+if returnvalue[3][0] == AFMax:
+    ws[row2+str(col+3)].fill = Green
+if returnvalue[4][0] == AFMax:
+    ws[row2+str(col+4)].fill= Green
+if returnvalue[5][0] == AFMax:
+    ws[row2+str(col+5)].fill = Green
+if returnvalue[6][0] == AFMax:
+    ws[row2+str(col+1)].fill = Green
+if returnvalue[7][0] == AFMax:
+    ws[row2+str(col+2)].fill = Green
+if returnvalue[8][0] == AFMax:
+    ws[row2+str(col+3)].fill = Green
+if returnvalue[9][0] == AFMax:
+    ws[row2+str(col+4)].fill= Green
+if returnvalue[10][0] == AFMax:
+    ws[row2+str(col+5)].fill = Green
+
+
+
+if returnvalue[0][1] == MurMin:
+    ws[row1+str(col)].fill = Red
+if returnvalue[1][1] == MurMin:
+    ws[row1+str(col+1)].fill = Red
+if returnvalue[2][1] == MurMin:
+    ws[row1+str(col+2)].fill = Red
+if returnvalue[3][1] == MurMin:
+    ws[row1+str(col+3)].fill = Red
+if returnvalue[4][1] == MurMin:
+    ws[row1+str(col+4)].fill = Red
+if returnvalue[5][1] == MurMin:
+    ws[row1+str(col+5)].fill = Red
+if returnvalue[6][1] == MurMin:
+    ws[row1+str(col+1)].fill = Red
+if returnvalue[7][1] == MurMin:
+    ws[row1+str(col+2)].fill = Red
+if returnvalue[8][1] == MurMin:
+    ws[row1+str(col+3)].fill = Red
+if returnvalue[9][1] == MurMin:
+    ws[row1+str(col+4)].fill = Red
+if returnvalue[10][1] == MurMin:
+    ws[row1+str(col+5)].fill = Red
+
+if returnvalue[0][0] == AFMin:
+    ws[row2+str(col)].fill = Red
+if returnvalue[1][0] == AFMin:
+    ws[row2+str(col+1)].fill = Red
+if returnvalue[2][0] == AFMin:
+    ws[row2+str(col+2)].fill = Red
+if returnvalue[3][0] == AFMin:
+    ws[row2+str(col+3)].fill = Red
+if returnvalue[4][0] == AFMin:
+    ws[row2+str(col+4)].fill= Red
+if returnvalue[5][0] == AFMin:
+    ws[row2+str(col+5)].fill = Red
+if returnvalue[6][0] == AFMin:
+    ws[row2+str(col)].fill = Red
+if returnvalue[7][0] == AFMin:
+    ws[row2+str(col+1)].fill = Red
+if returnvalue[8][0] == AFMin:
+    ws[row2+str(col+2)].fill = Red
+if returnvalue[9][0] == AFMin:
+    ws[row2+str(col+3)].fill = Red
+if returnvalue[10][0] == AFMin:
+    ws[row2+str(col+4)].fill= Red
 
 #Save To excel
 wb.save(ExcelFile)
