@@ -12,10 +12,10 @@ import openpyxl as px
 #***variables***
 mfccs = 0.0
 result = []
-col = 6
-row1 = 'B'
-row2 = 'C'
-file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/None/A22'
+col = 7
+row1 = 'D'
+row2 = 'E'
+file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/ReliableTest/Murmur/Mur'
 #file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/A22/EZRA/Ezra'#WAV File Path
 
 #Make list for all files
@@ -29,10 +29,10 @@ file_name7 = file+'Test7.wav'
 file_name8 = file+'Test8.wav'
 file_name9 = file+'Test9.wav'
 file_name10 = file+'Test10.wav'
+file_name11 = file+'Test11.wav'
 
-
-ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/ExprimentResultDAC.xlsx' #Excel File Path  .xlsx
-Sheet = 'A22' #Excel Sheet that is being edited
+ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/ReliableTest/ReliabilityResult.xlsx' #Excel File Path  .xlsx
+Sheet = 'A51' #Excel Sheet that is being edited
 
 data = []
 data1 = []
@@ -77,7 +77,7 @@ murmur = load_model('AI/Models/murmur.h5') #murmur AI Path
 
 
 #Extract and read the WAV file for the AI
-a = extract_data(file_name)
+a = extract_data(file_name1)
 data.append(a)
 
 #Analize Predict and Save the data
@@ -94,7 +94,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 #Do the same for all files
-a = extract_data(file_name1)
+a = extract_data(file_name2)
 data1.append(a)
 af_result = af.predict(np.array(data1))
 murmur_result = murmur.predict(np.array(data1))
@@ -105,7 +105,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name2)
+a = extract_data(file_name3)
 data2.append(a)
 af_result = af.predict(np.array(data2))
 murmur_result = murmur.predict(np.array(data2))
@@ -116,7 +116,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name3)
+a = extract_data(file_name4)
 data3.append(a)
 af_result = af.predict(np.array(data3))
 murmur_result = murmur.predict(np.array(data3))
@@ -127,7 +127,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name4)
+a = extract_data(file_name5)
 data4.append(a)
 af_result = af.predict(np.array(data4))
 murmur_result = murmur.predict(np.array(data4))
@@ -138,7 +138,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name5)
+a = extract_data(file_name6)
 data5.append(a)
 af_result = af.predict(np.array(data5))
 murmur_result = murmur.predict(np.array(data5))
@@ -149,7 +149,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name6)
+a = extract_data(file_name7)
 data6.append(a)
 af_result = af.predict(np.array(data6))
 murmur_result = murmur.predict(np.array(data6))
@@ -160,7 +160,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name7)
+a = extract_data(file_name8)
 data7.append(a)
 af_result = af.predict(np.array(data7))
 murmur_result = murmur.predict(np.array(data7))
@@ -171,7 +171,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name8)
+a = extract_data(file_name9)
 data8.append(a)
 af_result = af.predict(np.array(data8))
 murmur_result = murmur.predict(np.array(data8))
@@ -182,7 +182,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name9)
+a = extract_data(file_name10)
 data9.append(a)
 af_result = af.predict(np.array(data9))
 murmur_result = murmur.predict(np.array(data9))
@@ -193,7 +193,7 @@ murmur_return = b[0]*100
 returnvalue.append([af_return, murmur_return])
 
 
-a = extract_data(file_name10)
+a = extract_data(file_name11)
 data10.append(a)
 af_result = af.predict(np.array(data10))
 murmur_result = murmur.predict(np.array(data10))
