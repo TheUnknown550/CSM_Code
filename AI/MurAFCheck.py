@@ -33,7 +33,7 @@ murmur = load_model('AI/Models/murmur.h5') #murmur AI Path
 mfccs = 0.0
 data = []
 result = []
-file_name = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/MurmurTestWtFake.wav' #WAV File Path
+file_name = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/Earth.wav' #WAV File Path
 
 #Extract and read the WAV file for the AI
 a = extract_data(file_name)

@@ -12,26 +12,26 @@ import openpyxl as px
 #***variables***
 mfccs = 0.0
 result = []
-col = 7
-row1 = 'D'
-row2 = 'E'
-file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/ReliableTest/Murmur/Mur'
+col = 28
+row1 = 'B'
+row2 = 'C'
+file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/StethoscopeTest/A51/Littmann/HifiTest'
 #file = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/DACTest/A22/EZRA/Ezra'#WAV File Path
 
 #Make list for all files
-file_name1 = file+'Test1.wav'
-file_name2 = file+'Test2.wav'
-file_name3 = file+'Test3.wav'
-file_name4 = file+'Test4.wav'
-file_name5 = file+'Test5.wav'
-file_name6 = file+'Test6.wav'
-file_name7 = file+'Test7.wav'
-file_name8 = file+'Test8.wav'
-file_name9 = file+'Test9.wav'
-file_name10 = file+'Test10.wav'
-file_name11 = file+'Test11.wav'
+file_name1 = file+'1.wav'
+file_name2 = file+'2.wav'
+file_name3 = file+'3.wav'
+file_name4 = file+'4.wav'
+file_name5 = file+'5.wav'
+file_name6 = file+'6.wav'
+file_name7 = file+'7.wav'
+file_name8 = file+'8.wav'
+file_name9 = file+'9.wav'
+file_name10 = file+'10.wav'
+file_name11 = file+'11.wav'
 
-ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/ReliableTest/ReliabilityResult.xlsx' #Excel File Path  .xlsx
+ExcelFile = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/.xlsx' #Excel File Path  .xlsx
 Sheet = 'A51' #Excel Sheet that is being edited
 
 data = []
@@ -47,11 +47,11 @@ data9 = []
 data10 = []
 data11 = []
 returnvalue = []
-
+'''
 #Upload to Excel
 wb = px.load_workbook(ExcelFile)
 wsbook = wb.active
-ws = wb[Sheet]
+ws = wb[Sheet]'''
 
 #Function to extract file
 def extract_data(file_name):
@@ -217,7 +217,7 @@ print('File9: ',returnvalue[8])
 print('File10: ',returnvalue[9])
 print('File11: ',returnvalue[10])
 
-
+'''
 #Input the value to Excel
 ws[row1+str(col)].value = round(returnvalue[0][0],3)
 ws[row2+str(col)].value = round(returnvalue[0][1],3)
@@ -245,4 +245,4 @@ ws[row2+str(col+10)].value = round(returnvalue[10][1],3)
 
 #Save To excel
 wb.save(ExcelFile)
-print('\nImported to Excel')
+print('Imported to Excel')'''

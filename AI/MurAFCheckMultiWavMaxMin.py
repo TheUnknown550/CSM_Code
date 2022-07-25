@@ -208,7 +208,7 @@ print('File9: ',returnvalue[8])
 print('File10: ',returnvalue[9])
 print('File11: ',returnvalue[10])
 
-
+'''
 #Input the value to Excel
 ws[row1+str(col)].value = round(returnvalue[0][0],3)
 ws[row2+str(col)].value = round(returnvalue[0][1],3)
@@ -346,4 +346,4 @@ if returnvalue[10][0] == AFMin:
 
 #Save To excel
 wb.save(ExcelFile)
-print('\nImported to Excel')
+print('Imported to Excel')'''
