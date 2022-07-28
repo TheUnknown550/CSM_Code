@@ -22,13 +22,26 @@ def trim_wav( originalWavPath, newWavPath , start, end ):
     endSample = int( end * sampleRate )
     wavfile.write( newWavPath, sampleRate, waveData[startSample:endSample])
 
-path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest1.wav"
-path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest2.wav"
-path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest3.wav"
+path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest1.wav"
+path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest2.wav"
+path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest3.wav"
+path4 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest4.wav"
+path5 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest5.wav"
+path6 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest6.wav"
+path7 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest7.wav"
+path8 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest8.wav"
+path9 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest9.wav"
 
 Fpath1 = 'Sound1.wav'
 Fpath2 = 'Sound2.wav'
 Fpath3 = 'Sound3.wav'
+Fpath4 = 'Sound4.wav'
+Fpath5 = 'Sound5.wav'
+Fpath6 = 'Sound6.wav'
+Fpath7 = 'Sound7.wav'
+Fpath8 = 'Sound8.wav'
+Fpath9 = 'Sound9.wav'
+
 
 trim_wav(path1,Fpath1,0,10)
 trim_wav(path2,Fpath2,0,10)

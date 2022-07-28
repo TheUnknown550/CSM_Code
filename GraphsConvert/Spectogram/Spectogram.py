@@ -8,7 +8,7 @@ import librosa.display
 #to play audio
 import IPython.display as ipd
 
-path = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest9.wav"
+path = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest9.wav"
 
 x, sr = librosa.load(path)
 
