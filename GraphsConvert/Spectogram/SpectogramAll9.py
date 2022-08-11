@@ -22,15 +22,15 @@ def trim_wav( originalWavPath, newWavPath , start, end ):
     endSample = int( end * sampleRate )
     wavfile.write( newWavPath, sampleRate, waveData[startSample:endSample])
 
-path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest1.wav"
-path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest2.wav"
-path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest3.wav"
-path4 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest4.wav"
-path5 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest5.wav"
-path6 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest6.wav"
-path7 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest7.wav"
-path8 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest8.wav"
-path9 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest9.wav"
+path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest1.wav"
+path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest2.wav"
+path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest3.wav"
+path4 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest4.wav"
+path5 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest5.wav"
+path6 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest6.wav"
+path7 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest7.wav"
+path8 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest8.wav"
+path9 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Contact/ConTest9.wav"
 
 Fpath1 = 'Sound1.wav'
 Fpath2 = 'Sound2.wav'
@@ -60,6 +60,9 @@ print(x.shape, sr)
 
 X = librosa.stft(x)
 Xdb = librosa.amplitude_to_db(abs(X))
-librosa.display.specshow(Xdb, sr=sr, x_axis='time', y_axis='hz')
-plt.colorbar()
+fig, ax = plt.subplots()
+D_highres = librosa.stft(x, hop_length=100, n_fft=500)
+S_db_hr = librosa.amplitude_to_db(np.abs(D_highres), ref=np.max, amin=1e-05, top_db=90)
+img = librosa.display.specshow(S_db_hr, hop_length=100, x_axis='time', y_axis='linear',ax=ax)
+fig.colorbar(img, ax=ax, format="%+2.f dB")
 plt.show()
