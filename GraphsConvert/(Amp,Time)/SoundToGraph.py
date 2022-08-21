@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import wave, sys
+from scipy.signal import find_peaks
  
 # shows the sound waves
 def visualize(path: str):
@@ -21,6 +22,12 @@ def visualize(path: str):
         num = len(signal)
     )
 
+    Avgsig = np.average(np.abs(signal))
+    peaks, _ = find_peaks(signal, height = Avgsig*5)
+    print(Avgsig*5)
+    Avg = np.average(signal[peaks])
+    print(Avg)
+
     plt.figure(1)
 
     plt.title("Sound Wave")
@@ -29,11 +36,11 @@ def visualize(path: str):
 
     plt.plot(time, signal)
 
-    plt.show()
+    #plt.show()
 
 
 if __name__ == "__main__":
 
-    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/ReducNoise_Testing/TestFile1.wav"
+    Filepath = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/MicType/Sounds/Contact/ConTest1.wav"
  
     visualize(Filepath)

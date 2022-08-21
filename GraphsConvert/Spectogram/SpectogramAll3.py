@@ -22,9 +22,9 @@ def trim_wav( originalWavPath, newWavPath , start, end ):
     endSample = int( end * sampleRate )
     wavfile.write( newWavPath, sampleRate, waveData[startSample:endSample])
 
-path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest1.wav"
-path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest2.wav"
-path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Redmi Bud 3 lite/BudTest3.wav"
+path1 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest7.wav"
+path2 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest8.wav"
+path3 = "C:/Users/mattc/OneDrive/Documents/Project/CSM/Testing/MicTest/A51/Boya/BoyaTest9.wav"
 
 Fpath1 = 'Sound1.wav'
 Fpath2 = 'Sound2.wav'
