@@ -3,21 +3,21 @@ import glob
 import numpy as np
 from scipy.io import wavfile
 
-time = 5
+time = 10
 
 # Path to the folder containing the .wav files
-input_folder = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/AAAdataset/af/train'
+input_folder = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/nwewewe/normal/train'
 
 # Path to the folder where the sliced audio files will be saved
-output_folder = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/10Sec/AF'
+output_folder = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/10Sec/Normal'
 
 # Create the output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)
 
 # Get a list of all .wav files in the input folder
 wav_files = glob.glob(os.path.join(input_folder, '*.wav'))
-x = 94
-# Iterate over each .wav file
+x = 252
+# Iteate over each .wav file
 for wav_file in wav_files:
     x += 1
     # Load the .wav file

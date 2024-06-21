@@ -5,7 +5,7 @@ import wave
 import sys
 import contextlib
 
-audioname = 'C:/Users/mattc/OneDrive/Documents/Project/CSM/HeartDiseaseSounds/Both/B2.wav'
+audioname = 'c:/Users/matt_c/Documents/Projects/CS-M/Datasets/nwewewe/af/train/(10).wav'
 spf = wave.open(audioname, "r")
 # Extract Raw Audio from Wav File
 signal = spf.readframes(-1)
