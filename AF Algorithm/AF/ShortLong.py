@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.signal import find_peaks, butter, hilbert, filtfilt
 
-filename = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/10Sec/AF/(20).wav'
+filename = 'C:/Users/matt_c/Documents/Projects/CS-M/Datasets/10Sec/Normal/(20).wav'
 
 def homomorphic_envelope(y, fs, f_LPF=8, order=3):
     if fs <= 0:
