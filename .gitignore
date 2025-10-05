@@ -1,0 +1,63 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.env.*
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# MyPy, pip, build
+.mypy_cache/
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Staging/imports folder (created during consolidation)
+staged_imports/
+
+# Optional: model checkpoints and large binary weights (uncomment if you prefer to keep large models out of git)
+#*.ckpt
+#*.pt
+#*.pth
+#*.ckpt.*
+
+# Keep .h5 files tracked by default (comment out the next line if you decide to ignore them)
+#*.h5
+
+# Audio files: tracked by default; uncomment to ignore large media
+#*.wav
+#*.mp3
+
+# Windows Powershell history
+ConsoleHost_history.txt
+
+# End of .gitignore
