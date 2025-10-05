@@ -37,3 +37,8 @@ Key changes:
 - The `AudioProcess/` folder from `Other/` was moved to the repository root as `./AudioProcess/`.
 
 If anything looks misplaced or you want different organization (for example, renaming `ANC_imported/` to `ANC/` or merging certain notebooks into `NoiseCancel/`), tell me which folders to adjust and I will update the layout.
+
+## Open-source & contribution
+
+This repository is published under the `MIT` license. See `LICENSE` for details.
+
